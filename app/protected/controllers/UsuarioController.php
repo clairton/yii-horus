@@ -1,6 +1,33 @@
 <?php
 
-class UsuarioController extends GxController {
+class UsuarioController extends GxController {#adicionar os filtros, regras e ações REST nos controladores
+	/********RESTFUll*********/
+	public function filters(){
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			array(
+				'RestfullYii.filters.ERestFilter + REST.GET, REST.PUT, REST.POST, REST.DELETE'
+			),
+		);
+	}
+
+	public function actions(){
+		return array(
+			'REST.'=>'RestfullYii.actions.ERestActionProvider',
+		);
+	}
+
+	public function accessRules(){
+		return array(
+			array('allow', 'actions'=>array('REST.GET', 'REST.PUT', 'REST.POST', 'REST.DELETE'),
+				'users'=>array('*'),
+			),
+			array('allow', // deny all users
+				'users'=>array('*'),
+			),
+		);
+	}
+/********RESTFUll*********/
 
 
 	public function actionView($id) {

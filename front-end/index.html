@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Chat</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+	<link rel="stylesheet" type="text/css" href="css/custom.css"/>
+</head>
+
+<body>
+
+<div class="container" style="width:400px;">
+	<form id="contato">
+			<input type="hidden" name="usuario[idusuario]" id="idusuario" value="">
+			<div class="form-group">
+		    <label for="nome">Nome:</label>
+		    <input type="text" name="usuario[nome]" class="form-control" id="nome" placeholder="Informe seu E-mail">
+		  </div>
+		  <div class="form-group">
+		    <label for="ultimaconexao">Data Conex&atilde;o:</label>
+		    <input type="datetime" name="usuario[ultimaconexao]" class="form-control" id="ultimaconexao" placeholder="Digite a data">
+		  </div>
+		  <button type="button" class="btn btn-default" id="salvar">Salvar</button>
+			<button type="button" class="btn btn-default" id="novo">Novo</button>
+	</form>
+</div>
+<hr>
+<div class="container">
+	<table class="table table-bordered" id="listagemContatos">
+		<thead>
+        <tr>
+          <th>#</th>
+          <th>Nome</th>
+          <th>Conex&atilde;o</th>
+          <th>Opera&ccedil;&atilde;o</th>
+        </tr>
+      </thead>
+      <tbody>
+
+      </tbody>
+	</table>
+</div>
+<button type="button" class="btn btn-default" id="btCarregar">Carregar Listagem</button>
+<script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/init.js"></script>
+</body>
+</html>
