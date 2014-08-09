@@ -15,3 +15,4 @@ $usuarios= Usuario::model()->findAll($criteria);
 echo '<pre>';
 print_r($usuarios);
 echo '</pre>';
+
