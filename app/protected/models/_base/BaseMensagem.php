@@ -27,7 +27,7 @@ abstract class BaseMensagem extends GxActiveRecord {
 	}
 
 	public static function label($n = 1) {
-		return Yii::t('app', 'Mensagem|Mensagems', $n);
+		return Yii::t('app', 'Mensagem|Mensagens', $n);
 	}
 
 	public static function representingColumn() {

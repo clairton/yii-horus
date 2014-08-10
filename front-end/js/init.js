@@ -15,6 +15,13 @@ $(document).ready(function () {
 		limpar();
 	});
 });
+
+function limpar() {
+		$('#idusuario').val("");
+		$('#ultimaconexao').val("");
+		$('#nome').val("").focus();
+}
+
 function carregarListaDB(){
 		$("#listagemContatos tbody").html("");
 		$.ajax({
@@ -67,6 +74,7 @@ function criarRegistro() {
 		type:"POST",
 		success:function(data) {
 			carregarListaDB();
+			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
 			alert("Erro ao conectar");
@@ -80,6 +88,7 @@ function apagarRegistro(idUsuario) {
 		type:"DELETE",
 		success:function(data) {
 			carregarListaDB();
+			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
 			alert("Erro ao conectar");
@@ -93,8 +102,8 @@ function carregarRegistro(idUsuario) {
 		type:"GET",
 		success:function(data) {
 			$('#idusuario').val(data.data.usuario.idusuario);
-			$('#nome').val(data.data.usuario.nome);
 			$('#ultimaconexao').val(data.data.usuario.ultimaconexao);
+			$('#nome').val(data.data.usuario.nome).select();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
 			alert("Erro ao conectar");
@@ -111,9 +120,7 @@ function atualizarRegistro(idUsuario) {
 		type:"PUT",
 		success:function(data) {
 			carregarListaDB();
-			$('#idusuario').val("");
-			$('#nome').val("");
-			$('#ultimaconexao').val("");
+			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
 			alert("Erro ao conectar");
@@ -121,9 +128,3 @@ function atualizarRegistro(idUsuario) {
 	});
 }
 
-
-function limpar() {
-		$('#idusuario').val("");
-		$('#nome').val("");
-		$('#ultimaconexao').val("");
-}

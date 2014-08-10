@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Chat</title>
+<title>Chat - Usuário</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css"/>
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.css"/>
@@ -12,38 +12,39 @@
 
 <body>
 
-<div class="container" style="width:400px;">
+<div class="container" style="width:400px; margin-top: 20px;">
 	<form id="contato">
-			<input type="hidden" name="usuario[idusuario]" id="idusuario" value="">
-			<div class="form-group">
+		<input type="hidden" name="usuario[idusuario]" id="idusuario" value="">
+		<div class="form-group">
 		    <label for="nome">Nome:</label>
-		    <input type="text" name="usuario[nome]" class="form-control" id="nome" placeholder="Informe seu E-mail">
-		  </div>
-		  <div class="form-group">
+		    <input type="text" name="usuario[nome]" class="form-control" id="nome" 
+		    	placeholder="Informe seu e-mail">
+	  	</div>
+	  	<div class="form-group">
 		    <label for="ultimaconexao">Data Conex&atilde;o:</label>
-		    <input type="datetime" name="usuario[ultimaconexao]" class="form-control" id="ultimaconexao" placeholder="Digite a data">
-		  </div>
-		  <button type="button" class="btn btn-default" id="salvar">Salvar</button>
-			<button type="button" class="btn btn-default" id="novo">Novo</button>
+		    <input type="datetime" name="usuario[ultimaconexao]" class="form-control" id="ultimaconexao" placeholder="Informe a data">
+  		</div>
+
+  		<button type="button" class="btn btn-default" style="float: right" id="salvar">Salvar</button>
+		<button type="button" class="btn btn-default" style="float: right" id="novo">Novo</button>
+  		<button type="button" class="btn btn-default" id="btCarregar">Carregar Listagem</button>
 	</form>
 </div>
 <hr>
 <div class="container">
 	<table class="table table-bordered" id="listagemContatos">
 		<thead>
-        <tr>
-          <th>#</th>
-          <th>Nome</th>
-          <th>Conex&atilde;o</th>
-          <th>Opera&ccedil;&atilde;o</th>
-        </tr>
-      </thead>
-      <tbody>
-
-      </tbody>
+	        <tr>
+      			<th>#</th>
+	          	<th>Nome</th>
+        	  	<th>Conex&atilde;o</th>
+	          	<th>Operação</th>
+	        </tr>
+      	</thead>
+  		<tbody>
+      	</tbody>
 	</table>
 </div>
-<button type="button" class="btn btn-default" id="btCarregar">Carregar Listagem</button>
 <script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.js"></script>
 <script type="text/javascript" src="js/init.js"></script>
