@@ -97,7 +97,7 @@ function criarRegistro() {
 			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
-			alert("Erro ao conectar");
+			alert("Erro ao Limpar");
 		}
 	});
 }
@@ -111,7 +111,7 @@ function apagarRegistro(idMensagem) {
 			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
-			alert("Erro ao conectar");
+			alert("Erro ao Apagar");
 		}
 	});
 }
@@ -127,7 +127,7 @@ function carregarRegistro(idMensagem) {
 			$('#idusuario').val(data.data.mensagem.usuarioIdusuario.idusuario).focus();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
-			alert("Erro ao conectar");
+			alert("Erro ao Editar");
 		}
 	});
 }
@@ -146,7 +146,7 @@ function atualizarRegistro(idMensagem) {
 			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
-			alert("Erro ao conectar");
+			alert("Erro ao Atualizar");
 		}
 	});
 }

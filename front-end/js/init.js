@@ -33,7 +33,7 @@ function carregarListaDB(){
 					criarLista(item);
 				});
 			}else{
-				alert("No foi possível acessar");
+				alert("No foi possível Carregar");
 			}
 		});
 }
@@ -77,7 +77,7 @@ function criarRegistro() {
 			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
-			alert("Erro ao conectar");
+			alert("Erro ao Criar");
 		}
 	});
 }
@@ -91,7 +91,7 @@ function apagarRegistro(idUsuario) {
 			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
-			alert("Erro ao conectar");
+			alert("Erro ao Apagar");
 		}
 	});
 }
@@ -106,7 +106,7 @@ function carregarRegistro(idUsuario) {
 			$('#nome').val(data.data.usuario.nome).select();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
-			alert("Erro ao conectar");
+			alert("Erro ao Carregar");
 		}
 	});
 }
@@ -123,7 +123,7 @@ function atualizarRegistro(idUsuario) {
 			limpar();
 		},
 		error:function (xhr, ajaxOptions, thrownError){
-			alert("Erro ao conectar");
+			alert("Erro ao Atualizar");
 		}
 	});
 }

@@ -16,18 +16,18 @@
 	<form id="contato">
 		<input type="hidden" name="usuario[idmensagem]" id="idmensagem" value="">
 	  	<div class="form-group">
-	    	<label for="datahora">Usuário</label>
+	    	<label for="idusuario">Usuário</label>
 		    <select name="mensagem[usuarioIdusuario][idusuario]" class="form-control" id="idusuario" required>
 		    	<option/>
 		    </select>
 	  	</div>
 		<div class="form-group">
 	    	<label for="mensagem">Mensagem:</label>
-		    <input type="text" name="mensagem[mensagem]" class="form-control" id="mensagem" placeholder="Informe uma mensagem">
+		    <input type="text" name="mensagem[mensagem]" class="form-control" id="mensagem" placeholder="Informe uma mensagem"/>
 	 	</div>
 	  	<div class="form-group">
-		    <label for="datahora">Data/Hora</label>
-		    <input type="datetime" name="mensagem[datahora]" class="form-control" id="datahora" placeholder="Informe a data/hora">
+            <label for="datahora">Data/Hora</label>
+            <input type="text" name="mensagem[datahora]" class="form-control" id="datahora" placeholder="Informe a data/hora"/>
 	  	</div>
 	  	<button type="button" class="btn btn-default" style="float: right" id="salvar">Salvar</button>
 		<button type="button" class="btn btn-default" style="float: right" id="novo">Novo</button>
@@ -50,8 +50,8 @@
   	</tbody>
 	</table>
 </div>
-<script type="text/javascript" src="jquery/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.js"></script>
-<script type="text/javascript" src="js/mensagem.js"></script>
+<script type="text/javascript" src="jquery/jquery-2.1.1.min.js"/>
+<script type="text/javascript" src="js/bootstrap.js"/>
+<script type="text/javascript" src="js/init.js"/>
 </body>
 </html>
